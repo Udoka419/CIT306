@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../cit306_assignment"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CIT306"
+	}
+}
