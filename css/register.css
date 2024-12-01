@@ -374,7 +374,9 @@ color: #1da1f2;
   padding: 20px 25px;
 }
 
+<<<<<<< HEAD
 /* MEDIA QUERIES */
+
 @media screen and (min-height:800px){
   .first-bg{
     max-height: 800px;
