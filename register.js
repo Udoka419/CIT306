@@ -76,7 +76,7 @@ form.addEventListener('submit', async function(event) {
 //register function
 async function register(data) {
   const spinner = document.querySelector('.fa-spinner')
-  const URL = "http://localhost:3000/register"
+  const URL = "https://cit306-backend.onrender.com/register"
   const response = await fetch(URL, {
     method: "POST",
     headers: {
