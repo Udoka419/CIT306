@@ -374,7 +374,28 @@ color: #1da1f2;
   padding: 20px 25px;
 }
 
+<<<<<<< HEAD
 /* MEDIA QUERIES */
+=======
+.fa-spinner{
+  display: none !important;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.fa-spinner.open{
+  display: inherit !important;
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+>>>>>>> ab81cf1fa71813f718631cf8e61a6b92f09ad915
 @media screen and (min-height:800px){
   .first-bg{
     max-height: 800px;
