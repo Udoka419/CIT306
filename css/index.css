@@ -72,8 +72,7 @@ header{
   background-color: white;
 }
 .scrolled button.contact:hover{
-  background-color: #000;
-  border: 1px solid white;
+  background-color: blue;
 }
 .scrolled button.contact a{
   color: #000;
@@ -915,6 +914,22 @@ color: #1da1f2;
   }
   .speakers-img{
     grid-template-columns: repeat(2,1fr)
+  }
+
+  .footer-link{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+  .footer-column-3{
+    margin-bottom: 40px;
+    height: 60px;
+  }
+  .footer-info{
+    height: 27%;
+  }
+  .footer-box{
+    padding: 25px 20px;
   }
 }
 

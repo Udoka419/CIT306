@@ -51,7 +51,7 @@ document.getElementById('aboutLink').addEventListener('click', function(event) {
 
 
 
-// Event listener for the About link
+// Event listener for the contact link
 
 document.getElementById('contactLink').addEventListener('click', function(event) {
   event.preventDefault(); 

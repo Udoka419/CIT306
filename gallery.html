@@ -1,83 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
-  <link rel="stylesheet" href="./css/register.css">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="./css/gallery.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- NAV -->
-<div class="first-bg">
-  <header id="top">
-    <nav class="navbar">
-      <div class="head-logo">
-        <h1><a href="./index.html">TechFlix</a></h1>
-        <p class="fas fa-bars" id="toggle"></p>
-      </div>
-      <div class="nav-ul">
-        <div class="nav-link">
-          <ul>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./gallery.html">Gallery</a></li>
-          </ul>
+  <div class="first-bg">
+    <header id="top">
+      <nav class="navbar">
+        <div class="head-logo">
+          <h1><a href="./index.html">TechFlix</a></h1>
+          <p class="fas fa-bars" id="toggle"></p>
         </div>
-        <div class="button">
-          <button class="contact">
-            <a href="./register.html">Register Now</a>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-</div>
-
-
-  <!-- SECTION.REGISTER -->
-  <section class="register-section">
-    <div class="register-box">
-      <div class="register-img">
-
-      </div>
-
-      <div class="registration-form">
-        <form action="#" id="registerForm">
-          <p>Enter Registration Information</p>
-          <div class="first-last">
-           <input type="text" placeholder="First Name" required>
-           <input type="text" placeholder="Last Name" required>
+        <div class="nav-ul">
+          <div class="nav-link">
+            <ul>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./gallery.html">Gallery</a></li>
+            </ul>
           </div>
-          <input type="email" name="email" id="email" placeholder="Email Address" required>
-          <input type="tel" name="telephone" id="telephone" placeholder="Phone Number" required>
-          <!-- <input type="number" name="regno" id="regno" placeholder="Reg Number" required> -->
-          <select name="options" id="options" required>
-            <option value="" disabled selected>Select your Role</option>
-            <option value="Speaker">Speaker</option>
-            <option value="Host">Host</option>
-            <option value="Attendee">Attendee</option>  
-          </select>
-
-          <button type="submit" id="submit">Submit</button>
-        </form>
-    
-      <!-- Popup for success message -->
-      <div class="overlay" id="overlay"></div>
-      <div class="popup popup-hidden" id="successPopup">
-        <h3>You've Successfully Registered!</h3>
-      </div>
-    </div>
+          <div class="button">
+            <button class="contact">
+              <a href="./register.html">Register Now</a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <section class="gallery">
+    <p>Gallery</p>
+    <div class="gallery-img">
+      <div class="img1"></div>
+      <div class="img2"></div>
+      <div class="img3"></div>
+      <div class="img4"></div>
+      <div class="img5"></div>
+      <div class="img6"></div>
+      <div class="img7"></div>
+      <div class="img8"></div>
+      <div class="img9"></div>
+      <div class="img10"></div>
+      <div class="img11"></div>
+      <div class="img12"></div>
     </div>
   </section>
-  <!-- FIXED GO TO UP -->
-  <div id="myElement" class="hidden">
-    <a href="#top" id="scroll-top"><i class="fa-solid fa-chevron-up"></i></a>
-  </div>
 
+     <!-- FIXED GO TO UP -->
+     <div id="myElement" class="hidden">
+      <a href="#top" id="scroll-top"><i class="fa-solid fa-chevron-up"></i></a>
+    </div>
     <!-- SECTION-FOOTER -->
-    <footer>
+     <footer id="contact"> 
       <div class="footer-info">
   
         <div class="footer-box">
@@ -145,6 +123,6 @@
   
       </div>
      </footer>
-   <script src="./register.js"></script>
+  <script src="./about.js"></script>
 </body>
 </html>
