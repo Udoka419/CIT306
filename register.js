@@ -1,5 +1,6 @@
 // Get the navbar element
 const navbar = document.querySelector('.navbar');
+let processing = false
 
 // Add scroll event listener to the window
 window.addEventListener('scroll', () => {
@@ -51,21 +52,60 @@ navlink.classList.toggle('nav-show')
 navbar.classList.toggle('scrolling');
 })
 
-document.getElementById('registerForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent form submission
 
-  // Show success popup
-  const popup = document.getElementById('successPopup');
-  popup.classList.remove('popup-hidden');
-  popup.classList.add('show');
+//register new user
+const form = document.getElementById("registerForm")
 
-      // Hide popup after 1 second
-      setTimeout(() => {
-        popup.classList.remove('show');
-        popup.classList.add('hidden');
-    }, 1000);
-  // Redirect to index page after 3 seconds
-  setTimeout(() => {
-      window.location.href = 'index.html'; // Replace 'index.html' with your actual page
-  }, 2000);
+form.addEventListener('submit', async function(event) {
+  event.preventDefault();
+  const spinner = document.querySelector('.fa-spinner')
+  spinner.classList.add('open')
+
+  // Create a FormData object to capture all form fields
+  const formData = new FormData(form);
+
+  
+  const formValues = {};
+  formData.forEach((value, key) => {
+      formValues[key] = value;
+  });
+
+  await register(formValues);
 });
+
+//register function
+async function register(data) {
+  const spinner = document.querySelector('.fa-spinner')
+  const URL = "http://localhost:3000/register"
+  const response = await fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+
+  if(response.ok){
+    spinner.classList.remove('open')
+    // Show success popup
+    const popup = document.getElementById('successPopup');
+    popup.classList.remove('popup-hidden');
+    popup.classList.add('show');
+
+    // Hide popup after 1 second
+    setTimeout(() => {
+      popup.classList.remove('show');
+      popup.classList.add('hidden');
+    }, 4000);
+
+    // Redirect to index page after 3 seconds
+    setTimeout(() => {
+        window.location.href = 'index.html'; // Replace 'index.html' with your actual page
+    }, 5000);
+    const data = await response.json()
+  }
+  else{
+    spinner.classList.remove('open')
+    alert("Sorry couldn't register user")
+  }
+}
